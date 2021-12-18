@@ -1,5 +1,4 @@
 XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-//let reporters = require('jasmine-reporters');
 
 class test_api
 {
