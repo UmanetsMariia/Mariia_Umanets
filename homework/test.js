@@ -1,6 +1,6 @@
 XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
-class test_api
+class api
 {
     Upload()
     {
@@ -69,7 +69,7 @@ class test_api
         }        
 
 }
-test = new test_api();
+test = new api();
 
 
 setTimeout(test.Upload,1000);
@@ -81,12 +81,3 @@ setTimeout(function(){console.log('\n')},4000);
 setTimeout(test.DeleteFile,5000);
 setTimeout(function(){console.log('\n')},6000);
 
-describe('Test', () => {
-    it('Upload', (done) => {
-        request(options_upload, function (error, response) {
-            if (error) throw new Error(error);
-            id = JSON.parse(response.body).id;
-            JSON.parse(response.body).name.should.equal(FILE_NAME);
-            done();
-        });
-    })});
